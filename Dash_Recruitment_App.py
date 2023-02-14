@@ -215,7 +215,7 @@ def distplot(ax):
         'Well Below Average', 'Below Average', 'Slightly Below Average', 'Average', 'Slightly Above Average',
         'Above Average', 'Well Above Average')
     ax.set_xticks([-2.55, -1.6, -0.8, 0, 0.8, 1.6, 2.55])
-    ax.set_xticklabels(labels)
+    ax.set_xticklabels(labels, fontproperties=labels)
     ax.set_yticklabels([])
     plt.xticks(rotation=75)
     ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
