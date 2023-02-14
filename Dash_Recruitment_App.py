@@ -218,7 +218,7 @@ def distplot(ax):
     ax.set_xticklabels(labels)
     ax.set_yticklabels([])
     plt.xticks(rotation=75)
-    ax.tick_params(axis='x', direction='out', color='black', fontproperties=labels)
+    ax.tick_params(axis='x', direction='out', color='black')
     ax.tick_params(axis='y', width=0, color='black', labelsize=6)
     # ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.25)
     ax.set_facecolor('#e6e6e6')
