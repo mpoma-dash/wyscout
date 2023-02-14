@@ -28,11 +28,11 @@ fontPathBold = "./DDCHardware-Condensed.otf"
 fontPathNBold = "./DDCHardware-Regular.otf"
 titles = fm.FontProperties(fname=fontPathBold, size=28)
 positiontitle = fm.FontProperties(fname=fontPathNBold, size=30)
-playertitle = fm.FontProperties(fname=fontPathBold, size=42)
-teamtitle = fm.FontProperties(fname=fontPathBold, size=34)
+playertitle = fm.FontProperties(fname=fontPathBold, size=38)
+teamtitle = fm.FontProperties(fname=fontPathBold, size=30)
 seasontitle = fm.FontProperties(fname=fontPathBold, size=26)
 subtitles = fm.FontProperties(fname=fontPathNBold, size=24)
-labels = fm.FontProperties(fname=fontPathNBold, size=8)
+labels = fm.FontProperties(fname=fontPathNBold, size=12)
 
 
 @st.cache(allow_output_mutation=True)
