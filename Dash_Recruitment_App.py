@@ -27,7 +27,7 @@ from scipy import stats
 fontPathBold = "./DDCHardware-Condensed.otf"
 fontPathNBold = "./DDCHardware-Regular.otf"
 titles = fm.FontProperties(fname=fontPathBold, size=28)
-positiontitle = fm.FontProperties(fname=fontPathNBold, size=30)
+positiontitle = fm.FontProperties(fname=fontPathNBold, size=28)
 playertitle = fm.FontProperties(fname=fontPathBold, size=38)
 teamtitle = fm.FontProperties(fname=fontPathBold, size=30)
 seasontitle = fm.FontProperties(fname=fontPathBold, size=26)
