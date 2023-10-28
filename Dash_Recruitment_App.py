@@ -49,7 +49,7 @@ def load_data():
 def load_ncaa_data():
     #url = 'https://drive.google.com/file/d/1KD5nxMlZZImiArxLXg4N43uiUkJ4taQP/view?usp=sharing'
     #path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
-    path = './Wyscout_NCAA_2022.csv'
+    path = './Wyscout_NCAA_2023.csv'
     df = pd.read_csv(path)
     df.Team = df['Team']
     #df = df[(df.Team.isin(player)) & (df.Season.isin(season))]
