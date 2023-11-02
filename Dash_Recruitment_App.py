@@ -280,7 +280,7 @@ def positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('C2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -333,7 +333,7 @@ def positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('C2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -389,7 +389,7 @@ def positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('C2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -442,7 +442,7 @@ def positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -494,7 +494,7 @@ def positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -547,7 +547,7 @@ def positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('C2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -614,7 +614,7 @@ def ncaa_positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -667,7 +667,7 @@ def ncaa_positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -722,7 +722,7 @@ def ncaa_positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -775,7 +775,7 @@ def ncaa_positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -827,7 +827,7 @@ def ncaa_positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
@@ -880,7 +880,7 @@ def ncaa_positional_zscore_df(state):
             format1 = workbook.add_format({'num_format': '0.00'})
             worksheet.set_column('A:A', None, format1)
             worksheet.freeze_panes('D2')
-            writer.save()
+            writer.close()
             processed_data = output.getvalue()
             return processed_data
 
