@@ -560,13 +560,16 @@ def ncaa_positional_zscore_df(state):
     df1 = load_ncaa_data()
 
     conference = (df1['conference_type'].unique()).tolist()
+    season = (df1['Season'].unique()).tolist()
 
 
-    col1, col2= st.columns(2)
+    col1, col2, col3 = st.columns(3)
     with col1:
-        conference = st.multiselect('Select Conference Level', natsorted(df1.conference_type.unique()), default=conference)
-    league_df = df1[df1['conference_type'].isin(conference)]
+        season =  st.selectbox('Select Year', [2024, 2023, 2022])
     with col2:
+        conference = st.multiselect('Select Conference Level', natsorted(df1.conference_type.unique()), default=conference)
+    league_df = df1[(df1['conference_type'].isin(conference)) & (df1['Season'].isin(season)]
+    with col3:
         position = st.selectbox('Select Position', ['CF', 'W', 'AM-CM', 'DM', 'FB', 'CB'])
 
     st.markdown('## Conditional Formatted Dataframe')
