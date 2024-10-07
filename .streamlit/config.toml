@@ -12,4 +12,4 @@ secondaryBackgroundColor = "#20262b"
 # Color used for almost all text.
 textColor = "#8ab7e9"
 
-font = 'monospace'
+font = 'sans-serif'
