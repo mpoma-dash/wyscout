@@ -59,10 +59,10 @@ def load_ncaa_data():
 def main():
     state = _get_state()
     pages = {
-        "Player Comparison Charts": Percentile,
-        "Positional Formatted Dataframes": positional_zscore_df,
+        "NCAA - Player Comparison Charts": NCAA_Percentile,
         "NCAA - Positional Formatted Dataframes": ncaa_positional_zscore_df,
-        "NCAA - Player Comparison Charts": NCAA_Percentile
+        "Player Comparison Charts": Percentile,
+        "Positional Formatted Dataframes": positional_zscore_df
     }
 
     # st.sidebar.title("Page Filters")
