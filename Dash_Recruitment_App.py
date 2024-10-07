@@ -578,7 +578,7 @@ def ncaa_positional_zscore_df(state):
 
     if position == 'CF':
         position_df = league_df[league_df['Position'].str.contains(position, na=False)]
-        filter_df = position_df[(position_df['Minutes played'] >= 100) & (position_df.Team.notnull())]
+        filter_df = position_df[(position_df['Minutes played'] >= 300) & (position_df.Team.notnull())]
         player_data = pd.DataFrame(filter_df,
                                    columns=['Team', 'Player', 'Age', 'Minutes played',  'Non-penalty goals per 90', 'xG per 90',
                                             'Shots per 90', 'Shots on target, %', 'Goal conversion, %', 'Touches in box per 90',
