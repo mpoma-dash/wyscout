@@ -220,10 +220,10 @@ def distplot(ax):
     plt.xticks(rotation=75)
     ax.tick_params(axis='x', direction='out', color='white')
     ax.tick_params(axis='y', width=0, color='white', labelsize=6)
-    ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.25)
+    #ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.25)
     ax.set_facecolor('#101820')
     plt.xlim(-3.5, 3.5)
-    plt.title('Distribution of Performances', size=24, color='white')
+    plt.title('Distribution of Performances', fontproperties=positiontitle, color='white')
 
 def positional_zscore_df(state):
     df = load_data()
