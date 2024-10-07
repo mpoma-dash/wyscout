@@ -595,8 +595,8 @@ def ncaa_positional_zscore_df(state):
 
         player_data[col_list] = player_data[col_list].apply(zscore)
         player_data['Average_ZScore'] = player_data[col_list].mean(axis=1)
-        #player_data = player_data.drop(columns=['index'])
-        player_data = player_data.set_index(['index','Team', 'Player', 'Average_ZScore'])
+        player_data = player_data.drop(columns=['index'])
+        player_data = player_data.set_index(['Team', 'Player', 'Average_ZScore'])
         cf_df = (player_data.style.background_gradient(vmin=-3, vmax=3,
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
