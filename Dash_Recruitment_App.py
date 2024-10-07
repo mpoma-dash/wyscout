@@ -559,7 +559,7 @@ def positional_zscore_df(state):
 def ncaa_positional_zscore_df(state):
     df1 = load_ncaa_data()
     
-    #df1['Season'] = df1['Season'].astype(int)
+    df1['conference_type'] = df1['conference_type'].astype(str)
 
     conference = (df1['conference_type'].unique()).tolist()
     season = (df1['Season'].unique()).tolist()
