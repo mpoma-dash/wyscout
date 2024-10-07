@@ -559,7 +559,7 @@ def positional_zscore_df(state):
 def ncaa_positional_zscore_df(state):
     df1 = load_ncaa_data()
     
-    df1['conference_type'] = df1['conference_type'].astype(str)
+    #df1['conference_type'] = df1['conference_type'].astype(str)
 
     conference = (df1['conference_type'].unique()).tolist()
     season = (df1['Season'].unique()).tolist()
@@ -1866,7 +1866,7 @@ def NCAA_Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1887,7 +1887,7 @@ def NCAA_Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
 
@@ -1895,7 +1895,7 @@ def NCAA_Percentile(state):
         ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
         ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1906,7 +1906,7 @@ def NCAA_Percentile(state):
         plt.xticks(my_range, test.index, fontproperties=labels)
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
-        fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(conference), color='black',
+        fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(conference), color='white',
                  fontproperties=labels)
         ax_standard_curve = plt.subplot(gs[1, 1])
         distplot(ax_standard_curve)
@@ -1920,12 +1920,12 @@ def NCAA_Percentile(state):
         textax.text(.5, .61, str(conference), fontproperties=seasontitle,
                  horizontalalignment='center', verticalalignment='center')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
