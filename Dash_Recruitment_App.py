@@ -660,18 +660,29 @@ def ncaa_positional_zscore_df(state):
         player_data = player_data.fillna(0)
         player_data.Age = player_data.Age.astype(int)
         player_df = player_data
+        
+        
+##for normal stats dataframe
+        player_df = player_df.sort_values(by='Player', ascending=True)
+        player_df = player_df.set_index(['Team', 'Player'])
+        p_df = (player_df.style.background_gradient(cmap=sns.color_palette("seismic_r", as_cmap=True),
+                                                       subset=col_list))
+        
 
+##for zscore dataframe
         player_data[col_list] = player_data[col_list].apply(zscore)
         player_data['Average_ZScore'] = player_data[col_list].mean(axis=1)
         player_data = player_data.sort_values(by='Average_ZScore', ascending=False)
         player_data = player_data.drop(columns=['index'])
         player_data = player_data.set_index(['Team', 'Player', 'Average_ZScore'])
-
         cf_df = (player_data.style.background_gradient(vmin=-3, vmax=3,
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
-
+        
+        st.write('Dataframe of ZScores - Auto Sort by Highest Average ZScore Across All Metrics')
         st.dataframe(cf_df, width=1280, height=768)
+        st.write('Dataframe of Player Outputs by Metric')
+        st.dataframe(p_df, width=1280, height=768)
         fn = str(position) + ' - ' + str(conference) + ' DataFrame.xlsx'
         player_data_download = player_data.reset_index()
         player_data_download = (player_data_download.style.background_gradient(vmin=-3, vmax=3,
@@ -719,17 +730,29 @@ def ncaa_positional_zscore_df(state):
         player_data = player_data.fillna(0)
         player_data.Age = player_data.Age.astype(int)
         player_df = player_data
+        
+        
+##for normal stats dataframe
+        player_df = player_df.sort_values(by='Player', ascending=True)
+        player_df = player_df.set_index(['Team', 'Player'])
+        p_df = (player_df.style.background_gradient(cmap=sns.color_palette("seismic_r", as_cmap=True),
+                                                       subset=col_list))
+        
+
+##for zscore dataframe
         player_data[col_list] = player_data[col_list].apply(zscore)
         player_data['Average_ZScore'] = player_data[col_list].mean(axis=1)
         player_data = player_data.sort_values(by='Average_ZScore', ascending=False)
         player_data = player_data.drop(columns=['index'])
         player_data = player_data.set_index(['Team', 'Player', 'Average_ZScore'])
-
         cf_df = (player_data.style.background_gradient(vmin=-3, vmax=3,
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
-
+        
+        st.write('Dataframe of ZScores - Auto Sort by Highest Average ZScore Across All Metrics')
         st.dataframe(cf_df, width=1280, height=768)
+        st.write('Dataframe of Player Outputs by Metric')
+        st.dataframe(p_df, width=1280, height=768)
         fn = str(position) + ' - ' + str(conference) + ' DataFrame.xlsx'
         player_data_download = player_data.reset_index()
         player_data_download = (player_data_download.style.background_gradient(vmin=-3, vmax=3,
@@ -774,17 +797,29 @@ def ncaa_positional_zscore_df(state):
         player_data = player_data.fillna(0)
         player_data.Age = player_data.Age.astype(int)
         player_df = player_data
+        
+        
+##for normal stats dataframe
+        player_df = player_df.sort_values(by='Player', ascending=True)
+        player_df = player_df.set_index(['Team', 'Player'])
+        p_df = (player_df.style.background_gradient(cmap=sns.color_palette("seismic_r", as_cmap=True),
+                                                       subset=col_list))
+        
+
+##for zscore dataframe
         player_data[col_list] = player_data[col_list].apply(zscore)
         player_data['Average_ZScore'] = player_data[col_list].mean(axis=1)
         player_data = player_data.sort_values(by='Average_ZScore', ascending=False)
         player_data = player_data.drop(columns=['index'])
         player_data = player_data.set_index(['Team', 'Player', 'Average_ZScore'])
-
         cf_df = (player_data.style.background_gradient(vmin=-3, vmax=3,
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
-
+        
+        st.write('Dataframe of ZScores - Auto Sort by Highest Average ZScore Across All Metrics')
         st.dataframe(cf_df, width=1280, height=768)
+        st.write('Dataframe of Player Outputs by Metric')
+        st.dataframe(p_df, width=1280, height=768)
         fn = str(position) + ' - ' + str(conference) + ' DataFrame.xlsx'
         player_data_download = player_data.reset_index()
         player_data_download = (player_data_download.style.background_gradient(vmin=-3, vmax=3,
@@ -828,17 +863,29 @@ def ncaa_positional_zscore_df(state):
         player_data = player_data.fillna(0)
         player_data.Age = player_data.Age.astype(int)
         player_df = player_data
+        
+        
+##for normal stats dataframe
+        player_df = player_df.sort_values(by='Player', ascending=True)
+        player_df = player_df.set_index(['Team', 'Player'])
+        p_df = (player_df.style.background_gradient(cmap=sns.color_palette("seismic_r", as_cmap=True),
+                                                       subset=col_list))
+        
+
+##for zscore dataframe
         player_data[col_list] = player_data[col_list].apply(zscore)
         player_data['Average_ZScore'] = player_data[col_list].mean(axis=1)
         player_data = player_data.sort_values(by='Average_ZScore', ascending=False)
         player_data = player_data.drop(columns=['index'])
         player_data = player_data.set_index(['Team', 'Player', 'Average_ZScore'])
-
         cf_df = (player_data.style.background_gradient(vmin=-3, vmax=3,
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
-
+        
+        st.write('Dataframe of ZScores - Auto Sort by Highest Average ZScore Across All Metrics')
         st.dataframe(cf_df, width=1280, height=768)
+        st.write('Dataframe of Player Outputs by Metric')
+        st.dataframe(p_df, width=1280, height=768)
         fn = str(position) + ' - ' + str(conference) + ' DataFrame.xlsx'
         player_data_download = player_data.reset_index()
         player_data_download = (player_data_download.style.background_gradient(vmin=-3, vmax=3,
@@ -884,17 +931,29 @@ def ncaa_positional_zscore_df(state):
         player_data = player_data.fillna(0)
         player_data.Age = player_data.Age.astype(int)
         player_df = player_data
+        
+        
+##for normal stats dataframe
+        player_df = player_df.sort_values(by='Player', ascending=True)
+        player_df = player_df.set_index(['Team', 'Player'])
+        p_df = (player_df.style.background_gradient(cmap=sns.color_palette("seismic_r", as_cmap=True),
+                                                       subset=col_list))
+        
+
+##for zscore dataframe
         player_data[col_list] = player_data[col_list].apply(zscore)
         player_data['Average_ZScore'] = player_data[col_list].mean(axis=1)
         player_data = player_data.sort_values(by='Average_ZScore', ascending=False)
         player_data = player_data.drop(columns=['index'])
         player_data = player_data.set_index(['Team', 'Player', 'Average_ZScore'])
-
         cf_df = (player_data.style.background_gradient(vmin=-3, vmax=3,
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
-
+        
+        st.write('Dataframe of ZScores - Auto Sort by Highest Average ZScore Across All Metrics')
         st.dataframe(cf_df, width=1280, height=768)
+        st.write('Dataframe of Player Outputs by Metric')
+        st.dataframe(p_df, width=1280, height=768)
         fn = str(position) + ' - ' + str(conference) + ' DataFrame.xlsx'
         player_data_download = player_data.reset_index()
         player_data_download = (player_data_download.style.background_gradient(vmin=-3, vmax=3,
