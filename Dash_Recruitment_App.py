@@ -218,10 +218,10 @@ def distplot(ax):
     ax.set_xticklabels(labels)
     ax.set_yticklabels([])
     plt.xticks(rotation=75)
-    ax.tick_params(axis='x', direction='out', color='black')
+    ax.tick_params(axis='x', direction='out', color='white')
     ax.tick_params(axis='y', width=0, color='black', labelsize=6)
     # ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.25)
-    ax.set_facecolor('#e6e6e6')
+    ax.set_facecolor('#101820')
     plt.xlim(-3.5, 3.5)
     # plt.title('Distribution of Performances', size=24)
 
@@ -1902,8 +1902,8 @@ def NCAA_Percentile(state):
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
         plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(conference), color='white',
@@ -1912,13 +1912,13 @@ def NCAA_Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(conference), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
             textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
