@@ -570,7 +570,7 @@ def ncaa_positional_zscore_df(state):
         season =  st.selectbox('Select Year', [2024, 2023, 2022])
     with col2:
         conference = st.multiselect('Select Conference Level', natsorted(df1.conference_type.unique()), default=conference)
-    league_df = df1[(df1['conference_type'].isin(conference)) & (df1['Season']str.contains(season, na=False))]
+    league_df = df1[(df1['conference_type'].isin(conference)) & (df1['Season'].str.contains(season, na=False))]
     with col3:
         position = st.selectbox('Select Position', ['CF', 'W', 'AM-CM', 'DM', 'FB', 'CB'])
 
