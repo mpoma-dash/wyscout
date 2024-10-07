@@ -215,15 +215,15 @@ def distplot(ax):
         'Well Below Average', 'Below Average', 'Slightly Below Average', 'Average', 'Slightly Above Average',
         'Above Average', 'Well Above Average')
     ax.set_xticks([-2.55, -1.6, -0.8, 0, 0.8, 1.6, 2.55])
-    ax.set_xticklabels(labels)
+    ax.set_xticklabels(labels, color='white')
     ax.set_yticklabels([])
     plt.xticks(rotation=75)
     ax.tick_params(axis='x', direction='out', color='white')
-    ax.tick_params(axis='y', width=0, color='black', labelsize=6)
-    # ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.25)
+    ax.tick_params(axis='y', width=0, color='white', labelsize=6)
+    ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.25)
     ax.set_facecolor('#101820')
     plt.xlim(-3.5, 3.5)
-    # plt.title('Distribution of Performances', size=24)
+    plt.title('Distribution of Performances', size=24, color='white')
 
 def positional_zscore_df(state):
     df = load_data()
@@ -1892,8 +1892,8 @@ def NCAA_Percentile(state):
         baseline.set_transform(plt.gca().get_yaxis_transform())
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
         ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
@@ -1901,7 +1901,7 @@ def NCAA_Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
         plt.yticks(fontproperties=labels, color='white')
         plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
