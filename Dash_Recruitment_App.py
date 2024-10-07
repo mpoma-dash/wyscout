@@ -591,6 +591,17 @@ def ncaa_positional_zscore_df(state):
         player_data = player_data.fillna(0)
         player_data.Age = player_data.Age.astype(int)
         player_df = player_data
+        
+        
+##for normal stats dataframe
+        player_df = player_df.sort_values(by='Player', ascending=True)
+        player_df = player_df.set_index(['Team', 'Player'])
+        p_df = (player_df.style.background_gradient(vmin=-3, vmax=3,
+                                                       cmap=sns.color_palette("seismic_r", as_cmap=True),
+                                                       subset=col_list))
+        
+        st.dataframe(p_df, width=1280, height=768)
+
 
 ##for zscore dataframe
         player_data[col_list] = player_data[col_list].apply(zscore)
@@ -602,14 +613,6 @@ def ncaa_positional_zscore_df(state):
                                                        cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
         
-##for normal stats dataframe
-        player_df = player_df.sort_values(by='Player', ascending=True)
-        player_df = player_df.set_index(['Team', 'Player'])
-        p_df = (player_df.style.background_gradient(vmin=-3, vmax=3,
-                                                       cmap=sns.color_palette("seismic_r", as_cmap=True),
-                                                       subset=col_list))
-        
-        st.dataframe(p_df, width=1280, height=768)
 
         st.dataframe(cf_df, width=1280, height=768)
         fn = str(position) + ' - ' + str(conference) + ' DataFrame.xlsx'
