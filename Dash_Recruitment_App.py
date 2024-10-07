@@ -596,8 +596,7 @@ def ncaa_positional_zscore_df(state):
 ##for normal stats dataframe
         player_df = player_df.sort_values(by='Player', ascending=True)
         player_df = player_df.set_index(['Team', 'Player'])
-        p_df = (player_df.style.background_gradient(vmin=-3, vmax=3,
-                                                       cmap=sns.color_palette("seismic_r", as_cmap=True),
+        p_df = (player_df.style.background_gradient(cmap=sns.color_palette("seismic_r", as_cmap=True),
                                                        subset=col_list))
         
         st.dataframe(p_df, width=1280, height=768)
