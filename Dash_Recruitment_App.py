@@ -2714,7 +2714,7 @@ def NCAA_Percentile(state):
 st.set_page_config(layout="wide", page_title='Dash Recruitment App', initial_sidebar_state='collapsed')
 logo_url = "./Dash_H.png"
 st.sidebar.image(logo_url, width=150)
-st.markdown('## Houston Dash Recruitment App ##')
+st.sidebar.title('Houston Dash Recruitment App')
 
 
 if __name__ == "__main__":
