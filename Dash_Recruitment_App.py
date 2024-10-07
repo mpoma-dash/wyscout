@@ -1024,7 +1024,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1048,12 +1048,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1070,20 +1072,20 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(league), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
@@ -1148,7 +1150,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1172,12 +1174,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1194,20 +1198,20 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(league), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
@@ -1277,7 +1281,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1301,12 +1305,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1323,20 +1329,20 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(league), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
@@ -1404,7 +1410,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1428,12 +1434,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1450,20 +1458,20 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(league), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
@@ -1531,7 +1539,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1555,12 +1563,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1577,20 +1587,20 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(league), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
@@ -1658,7 +1668,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1682,12 +1692,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1704,20 +1716,20 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .61, str(league), fontproperties=seasontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .485, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
@@ -1781,7 +1793,7 @@ def Percentile(state):
         player_data = player_data.set_index('Player')
         test = player_data.transpose()
         my_range = range(0, len(test.index))
-        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#e6e6e6')
+        fig, ax = plt.subplots(figsize=(34, 20), facecolor='#101820')
         gs = gridspec.GridSpec(2, 2, wspace=0.075, hspace=0.35, width_ratios=[1, .25], height_ratios=[1, .5])
         ax = plt.subplot(gs[0:, 0])
         markers, stemlines, baseline = plt.stem(test[player],
@@ -1805,12 +1817,14 @@ def Percentile(state):
         plt.setp(baseline, linestyle="-", color="black", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
+        
+        
 
         # ax.annotate('test', xy=(.35,3.8), zorder=25)
-        ax.tick_params(axis='x', direction='out', color='black', labelsize=12)
-        ax.tick_params(axis='y', direction='out', color='black', labelsize=10)
+        ax.tick_params(axis='x', direction='out', color='white', labelsize=12)
+        ax.tick_params(axis='y', direction='out', color='white', labelsize=10)
         ax.grid(color='white', linestyle='solid', linewidth=2, alpha=.5)
-        ax.set_facecolor('#595959')
+        ax.set_facecolor('#20262b')
         player_df = player_df.fillna(0)
         player_df['Age'] = int(player_df.Age)
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
@@ -1827,22 +1841,22 @@ def Percentile(state):
         distplot(ax_standard_curve)
         textax = plt.subplot(gs[0,1])
         textax.text(.5, .9, str(position)+' Standardized Metric Graph', fontproperties=positiontitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .715, str(player) + '\n', fontproperties=playertitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
         textax.text(.5, .68, str(team), fontproperties=teamtitle,
-                 horizontalalignment='center', verticalalignment='center')
+                 horizontalalignment='center', verticalalignment='center', color='white')
+        textax.text(.5, .61, str(league), fontproperties=seasontitle,
+                 horizontalalignment='center', verticalalignment='center', color='white')
         if sum(player_df.Age) > 0:
-            textax.text(.5, .52, 'Age: ' + str(sum(player_df['Age'])), color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: ' + str(sum(player_df['Age'])), color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
         else:
-            textax.text(.5, .52, 'Age: N/A', color='black', fontproperties=subtitles,
+            textax.text(.5, .485, 'Age: N/A', color='white', fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(.5, .475, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='black',
+        textax.text(.5, .43, 'Minutes Played: ' + str(sum(player_df['Minutes played'])), color='white',
                  fontproperties=subtitles,
                  horizontalalignment='center', verticalalignment='center')
-        textax.text(0.5, 0.05, 'Blue in Avg Pass Length = Shorter Passes\nBlue in Shots, Goals, xG Conceded = Less Conceded',
-                    color='black', fontproperties=labels, horizontalalignment='center', verticalalignment='center')
         textax.axis('off')
         st.pyplot(fig)
         fn = str(player) + ' - ' + str(position) + ' - ' + str(league) + '.png'
