@@ -1171,7 +1171,7 @@ def Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
         
@@ -1187,9 +1187,9 @@ def Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(league), color='black',
@@ -1302,7 +1302,7 @@ def Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
         
@@ -1318,9 +1318,9 @@ def Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(league), color='black',
@@ -1431,7 +1431,7 @@ def Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
         
@@ -1447,9 +1447,9 @@ def Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(league), color='black',
@@ -1560,7 +1560,7 @@ def Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
         
@@ -1576,9 +1576,9 @@ def Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(league), color='black',
@@ -1689,7 +1689,7 @@ def Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
         
@@ -1705,9 +1705,9 @@ def Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(league), color='black',
@@ -1814,7 +1814,7 @@ def Percentile(state):
         plt.setp(stemlines, color=my_color, lw=30)
         # plt.setp(markers, color)
         plt.scatter(test.index, test[player], marker='o', s=1250, c=my_color, edgecolors='white', lw=4, zorder=12)
-        plt.setp(baseline, linestyle="-", color="black", linewidth=10)
+        plt.setp(baseline, linestyle="-", color="white", linewidth=10)
         baseline.set_xdata([0, 1])
         baseline.set_transform(plt.gca().get_yaxis_transform())
         
@@ -1830,9 +1830,9 @@ def Percentile(state):
         # plt.title(str(player)+' - '+str(position)+'\nMinutes Played: '+str(sum(player_df['Minutes played']))+'\nAge: '+str(sum(player_df['Age'])),
         #         fontproperties=titles)
         # plt.title(str(player) + ' - ' + str(position) + '\n' + '\n', fontproperties=titles)
-        plt.ylabel('Difference From Average Performance', fontproperties=labels)
-        plt.yticks(fontproperties=labels)
-        plt.xticks(my_range, test.index, fontproperties=labels)
+        plt.ylabel('Difference From Average Performance', fontproperties=labels, color='white')
+        plt.yticks(fontproperties=labels, color='white')
+        plt.xticks(my_range, test.index, fontproperties=labels, color='white')
         plt.xticks(rotation=25)
         plt.ylim(-3.75, 3.75)
         fig.text(.1, 0, 'Metrics Standardized by Position within League | ' + str(league), color='black',
